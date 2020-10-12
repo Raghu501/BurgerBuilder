@@ -16,9 +16,16 @@ const buildControls = (props) => (
     <div className={class2.BuildControls}>
         {
             controls.map(ctrl =>
-                (<BuildControl label={ctrl.label} key={ctrl.label} />)
+                (<BuildControl
+                    label={ctrl.label}
+                    key={ctrl.label}
+                    add={() => { props.addHandler(ctrl.type) }}
+                    remove={() => { props.removeHandler(ctrl.type) }}
+                />)
             )
         }
+
+        <button disabled={!props.purchasable} onClick={props.purchasing}>ORDER NOW</button>
     </div>
 
 
