@@ -6,8 +6,10 @@
     top:0;
     z-index:200;
     background-color: white;
+    width: 200px;
     padding: 32px 16px;
     box-sizing: border-box;
+    border: 1px solid red;
     transition: transform 0.3s ease-out;
 }
 @media(min-width:500px)
@@ -16,9 +18,11 @@
         display: none;
     }
 }
-.open{
-transform: translateX(0);
+.open
+{
+  transform: translateX(0);
 }
 .close{
-    transform: translateX(-100);
+    -webkit-transform: translateX(-100%);
+    
 }
